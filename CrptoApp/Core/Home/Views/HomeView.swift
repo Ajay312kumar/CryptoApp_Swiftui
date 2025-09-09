@@ -7,16 +7,19 @@
 
 import SwiftUI
 struct HomeView: View {
+    
+    @State private var isShowPostfolio: Bool = false
+    
     var body: some View {
         ZStack {
             Color.theme.background
                 .ignoresSafeArea()
             
             VStack {
-                CircleButtonView(iconName: "house.fill") // ✅ valid SF Symbol
-                Spacer() // ✅ now inside VStack, pushes content up
+                homeHeader
+                Spacer(minLength: 0)
             }
-            .padding()
+            
         }
     }
 }
@@ -27,3 +30,36 @@ struct HomeView: View {
             .navigationBarHidden(true)
     }
 }
+
+extension HomeView {
+    
+    private var homeHeader: some View {
+        HStack {
+            CircleButtonView(iconName: isShowPostfolio ? "plus" : "info")
+                .animation(.none, value: isShowPostfolio)
+                .background(
+                    CircleButtonAnimationView(animate: $isShowPostfolio)
+                )
+            
+            Spacer()
+            
+            Text(isShowPostfolio ? "Portfolio" : "Live Price")
+                .font(.headline)
+                .fontWeight(.heavy)
+                .foregroundColor(Color.theme.accentColor)
+            
+            Spacer()
+            
+            CircleButtonView(iconName: "chevron.right")
+                .rotationEffect(Angle(degrees: isShowPostfolio ? 180 : 0))
+                .onTapGesture {
+                    withAnimation(.spring()) {
+                        isShowPostfolio.toggle()
+                    }
+                }
+           
+        }
+        .padding(.horizontal)
+    }
+}
+
