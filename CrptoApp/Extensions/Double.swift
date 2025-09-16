@@ -9,13 +9,13 @@ import Foundation
 
 extension Double {
     
-    private var currencyFormatter6: NumberFormatter {
+    private var currencyFormatter2: NumberFormatter {
         let formatter = NumberFormatter()
         formatter.usesGroupingSeparator = true
         formatter.numberStyle = .currency
 //        formatter.currencyCode = "USD"
         formatter.minimumFractionDigits = 2
-        formatter.maximumFractionDigits = 6
+        formatter.maximumFractionDigits = 2
         return formatter
     }
     
@@ -28,8 +28,17 @@ extension Double {
       /// // "$1,234.56789" (output depends on device locale)
       /// ```
     
-    func currencyWithDecimal() -> String {
+    func currencyWith2Decimal() -> String {
         let number = NSNumber(value: self)
-        return currencyFormatter6.string(from: number) ?? "$0.00"
+        return currencyFormatter2.string(from: number) ?? "$0.00"
     }
+    
+    func asNumberString() -> String{
+        return String(format: "%.2f", self)
+    }
+    
+    func asPercentageString() -> String{
+        return asNumberString() + "%"
+    }
+    
 }
