@@ -20,6 +20,7 @@
 		B7856EBA2EB27E07005653F8 /* CrptoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7856EAE2EB27E07005653F8 /* CrptoAppApp.swift */; };
 		B7856EBB2EB27E07005653F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7856EAC2EB27E07005653F8 /* Assets.xcassets */; };
 		B7856EBE2EB27E68005653F8 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7856EBD2EB27E68005653F8 /* CoinDataService.swift */; };
+		B7B3440C2EB3CA3700006E24 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3440B2EB3CA3700006E24 /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B7856EAD2EB27E07005653F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B7856EAE2EB27E07005653F8 /* CrptoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrptoAppApp.swift; sourceTree = "<group>"; };
 		B7856EBD2EB27E68005653F8 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
+		B7B3440B2EB3CA3700006E24 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		B7FDB0522E68B75200B074FC /* CrptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 		B7856EAF2EB27E07005653F8 /* CrptoApp */ = {
 			isa = PBXGroup;
 			children = (
+				B7B3440A2EB3CA1900006E24 /* Utilities */,
 				B7856EBC2EB27E0F005653F8 /* Services */,
 				B7856EA52EB27E07005653F8 /* Core */,
 				B7856EA92EB27E07005653F8 /* Extensions */,
@@ -140,6 +143,14 @@
 				B7856EBD2EB27E68005653F8 /* CoinDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		B7B3440A2EB3CA1900006E24 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B7B3440B2EB3CA3700006E24 /* NetworkingManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		B7FDB0492E68B75200B074FC = {
@@ -238,6 +249,7 @@
 				B7856EB42EB27E07005653F8 /* HomeView.swift in Sources */,
 				B7856EB52EB27E07005653F8 /* Color.swift in Sources */,
 				B7856EB62EB27E07005653F8 /* Double.swift in Sources */,
+				B7B3440C2EB3CA3700006E24 /* NetworkingManager.swift in Sources */,
 				B7856EB72EB27E07005653F8 /* PreviewProvider.swift in Sources */,
 				B7856EB82EB27E07005653F8 /* CoinModel.swift in Sources */,
 				B7856EB92EB27E07005653F8 /* ContentView.swift in Sources */,
